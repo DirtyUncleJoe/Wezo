@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Feedback Webseite</title>
+  <style>
+    body {
+      background-image: url('sky.jpg');
+      background-size: cover;
+      background-position: center;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      color: #fff;
+    }
+
+    #feedback-container {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+    }
+
+    textarea {
+      width: 100%;
+      max-width: 500px;
+      padding: 5px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 4px;
+      resize: vertical;
+      font-size: 16px;
+    }
+
+    button {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div id="feedback-container">
+    <h1>Feedback</h1>
+    <textarea id="feedback-text" placeholder="Write your Feedback here..."></textarea>
+    <button id="submit-button">Send</button>
+  </div>
+
+  <script>
+    document.getElementById('submit-button').addEventListener('click', function() {
+      const feedback = document.getElementById('feedback-text').value;
+      // Hier kannst du das Feedback verarbeiten, z.B. an einen Server senden
+      alert('Thank you for your Feedback:\n\n' + feedback);
+    });
+  </script>
+</body>
+</html>
